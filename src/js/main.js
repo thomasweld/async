@@ -8,7 +8,7 @@ console.log($);
 import card from './templates/card'
 
 // assign api url to a variable for later use
-var url = 'https://randomuser.me/api/?results=12';
+var url = 'https://randomuser.me/api/?results=12?nat=us';
 
 // assign HTML area where template will render profile cards on the page
 // will append results here later
