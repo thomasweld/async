@@ -3,8 +3,8 @@ function card (user) {
   return `
     <div class="card">
 
-      <div class="image">
-        <img src="${user.picture.large}" />
+      <div class="image" style="background-image: url('${user.picture.large}');  background-size: cover">
+
       </div>
 
       <div class="content">

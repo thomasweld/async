@@ -1,2 +1,45 @@
+header {
+  text-align: center; }
+
+.profiles {
+  margin: 0 auto;
+  width: 1000px;
+  overflow: auto; }
+
+.card {
+  float: left;
+  width: 220px;
+  height: 420px;
+  margin: 20px 0px 10px 24px;
+  text-align: center; }
+
+.image {
+  width: 220px;
+  height: 220px; }
+
+.name {
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+  height: 30px;
+  padding: 10px; }
+
+.email {
+  color: #cccccc;
+  height: 26px; }
+
+.address {
+  height: 60px; }
+
+.phone {
+  height: 26px; }
+
+.social {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  height: 26px; }
+  .social:hover {
+    color: green;
+    text-shadow: none; }
 
 /*# sourceMappingURL=main.css.map */

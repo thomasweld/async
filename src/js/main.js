@@ -19,6 +19,8 @@ var dataRequest = $.getJSON(url);
 
 console.log(dataRequest);
 
+var cardsHTML = '';
+
 // When it succedes, call my template Card Function
 dataRequest.then( function (res) {
 
@@ -31,11 +33,12 @@ dataRequest.then( function (res) {
     // passing each user into card function for templating / processing
     var html = card(user);
 
-    // append each result user card to html section class=cardArea
-    cardArea.append(html);
+    cardsHTML += html;
 
   });
 
+  // append each result user card to html section class=cardArea
+  cardArea.append(cardsHTML);
 
 });
 

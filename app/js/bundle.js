@@ -9872,6 +9872,8 @@ var dataRequest = _jquery2['default'].getJSON(url);
 
 console.log(dataRequest);
 
+var cardsHTML = '';
+
 // When it succedes, call my template Card Function
 dataRequest.then(function (res) {
 
@@ -9884,9 +9886,11 @@ dataRequest.then(function (res) {
     // passing each user into card function for templating / processing
     var html = (0, _templatesCard2['default'])(user);
 
-    // append each result user card to html section class=cardArea
-    cardArea.append(html);
+    cardsHTML += html;
   });
+
+  // append each result user card to html section class=cardArea
+  cardArea.append(cardsHTML);
 });
 
 //
@@ -9907,7 +9911,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 function card(user) {
-  return "\n    <div class=\"card\">\n\n      <div class=\"image\">\n        <img src=\"" + user.picture.large + "\" />\n      </div>\n\n      <div class=\"content\">\n        <div class=\"name\">" + user.name.first + " " + user.name.last + "</div>\n        <div class=\"email\">" + user.email + "</div>\n        <div class=\"address\">\n          " + user.location.street + " <br />\n          " + user.location.city + ", " + user.location.state + " " + user.location.postcode + "\n        </div>\n        <div class=\"phone\">" + user.phone + "</div>\n        <div class=\"social\">" + user.id.value + "</div>\n      </div>\n\n    </div>\n\n  ";
+  return "\n    <div class=\"card\">\n\n      <div class=\"image\" style=\"background-image: url('" + user.picture.large + "');  background-size: cover\">\n\n      </div>\n\n      <div class=\"content\">\n        <div class=\"name\">" + user.name.first + " " + user.name.last + "</div>\n        <div class=\"email\">" + user.email + "</div>\n        <div class=\"address\">\n          " + user.location.street + " <br />\n          " + user.location.city + ", " + user.location.state + " " + user.location.postcode + "\n        </div>\n        <div class=\"phone\">" + user.phone + "</div>\n        <div class=\"social\">" + user.id.value + "</div>\n      </div>\n\n    </div>\n\n  ";
 }
 
 exports["default"] = card;
