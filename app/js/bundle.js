@@ -9861,7 +9861,7 @@ var _templatesCard = require('./templates/card');
 var _templatesCard2 = _interopRequireDefault(_templatesCard);
 
 // assign api url to a variable for later use
-console.log(_jquery2['default']);var url = 'https://randomuser.me/api/?results=12';
+console.log(_jquery2['default']);var url = 'https://randomuser.me/api/?results=12&nat=us';
 
 // assign HTML area where template will render profile cards on the page
 // will append results here later
